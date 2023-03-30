@@ -83,7 +83,7 @@ section {
     width: 1.5rem;
     height: 1.5rem;
 
-    background: center url('/assets/images/icon-arrow-down.svg') no-repeat;
+    background: center url('../images/icon-arrow-down.svg') no-repeat;
     transition: .25s;
 }
 .content {
