@@ -94,8 +94,11 @@ section {
     display: block;
     opacity: 1;
 }
-.open button {
+.open .trigger {
     font-weight: bold;
+}
+.open .trigger::after {
+    transform: rotate(180deg);
 }
 
 /* footer */
