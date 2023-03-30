@@ -12,9 +12,11 @@
 </head>
 <body>
   <div class="container">
-    <figure>
-      <img src="./assets/images/illustration-woman-online-mobile.svg" alt="">
-    </figure>
+    <picture>
+      <source media="(max-width: 799px)" srcset="./assets/images/illustration-woman-online-mobile.svg">
+      <source media="(min-width: 800px)" srcset="./assets/images/illustration-woman-online-desktop.svg">
+      <img role="presentation" src="./assets/images/illustration-woman-online-desktop.svg" alt="">
+    </picture>
 
     <main>
       <h1>FAQ</h1>

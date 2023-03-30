@@ -26,17 +26,8 @@ body {
     background: linear-gradient(var(--soft-violet), var(--soft-blue));
 }
 
-.container {
-    max-width: 80%;
-    margin-top: 8rem;
-    display: flex;
-    flex-direction: column;
 
-    border-radius: 2rem;
-    background-color: white;
-    box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.2);
-}
-figure {
+picture {
     width: 15rem;
     margin: -6.5rem auto 0;
 }
@@ -45,7 +36,6 @@ img {
 
     filter: drop-shadow(0 30px 1px var(--light-grayish-blue));
 }
-
 main {
     width: 100%;
     padding: 2rem 1rem;
@@ -53,7 +43,28 @@ main {
 h1 {
     text-align: center;
 }
+p {
+    padding-top: 1rem;
 
+    font-size: .8rem;
+}
+section {
+    padding: 1rem 0;
+    
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+/* main */
+.container {
+    max-width: 60%;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 2rem;
+    background-color: white;
+    box-shadow: 0 15px 20px  rgba(0, 0, 0, 0.2);
+}
 .trigger {
     width: 100%;
     display: flex;
@@ -75,18 +86,6 @@ h1 {
     background: center url('/assets/images/icon-arrow-down.svg') no-repeat;
     transition: .25s;
 }
-p {
-    padding-top: 1rem;
-
-    font-size: .8rem;
-    
-}
-section {
-    padding: 1rem 0;
-    
-    border-bottom: 1px solid var(--light-grayish-blue);
-}
-
 .content {
     display: none;
     opacity: 0;
@@ -99,6 +98,7 @@ section {
     font-weight: bold;
 }
 
+/* footer */
 footer {
     padding: .5rem 0;
 
@@ -108,19 +108,24 @@ a:hover {
     color: var(--soft-red);
 }
 
+
 @media (min-width: 800px) {
+    .trigger, p {
+        font-size: 1.1rem;
+    }
     .container {
         margin: 0;
         flex-direction: row;
         overflow: hidden;
     }
-    figure {
+    picture {
         width: 45rem;
-        margin: auto 0 auto -7rem;
+        margin: auto 0 auto -5rem;
     }
     img {
-        filter: drop-shadow(0 80px 1px var(--light-grayish-blue));
+        filter: drop-shadow(-15px 95px 1px var(--light-grayish-blue));
     }
+
     main {
         padding: 3rem 5rem;
     }
@@ -130,5 +135,7 @@ a:hover {
     footer {
         position: absolute;
         bottom: 0;
+
+        font-size: 1.1rem;
     }
 }
