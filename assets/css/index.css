@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: var(--very-dark-desaturated-blue);
+
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+}
+
+.container {
+    max-width: 80%;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 2rem;
+    background-color: white;
+    box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.2);
+}
+figure {
+    width: 15rem;
+    margin: -6.5rem auto 0;
+}
+img {
+    width: 100%;
+
+    filter: drop-shadow(0 30px 1px var(--light-grayish-blue));
+}
+
+main {
+    width: 100%;
+    padding: 2rem 1rem;
+}
+h1 {
+    text-align: center;
+}
+
+.trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: transparent;
+    border: none;
+}
+.trigger:hover {
+    cursor: pointer;
+    color: var(--soft-red);
+}
+.trigger::after {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background: center url('/assets/images/icon-arrow-down.svg') no-repeat;
+    transition: .25s;
+}
+p {
+    padding-top: 1rem;
+
+    font-size: .8rem;
+    
+}
+section {
+    padding: 1rem 0;
+    
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.content {
+    display: none;
+    opacity: 0;
+}
+.open .content {
+    display: block;
+    opacity: 1;
+}
+.open button {
+    font-weight: bold;
+}
+
+footer {
+    padding: .5rem 0;
+
+    font-size: .8rem;
+}
+a:hover {
+    color: var(--soft-red);
+}
+
+@media (min-width: 800px) {
+    .container {
+        margin: 0;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    figure {
+        width: 45rem;
+        margin: auto 0 auto -7rem;
+    }
+    img {
+        filter: drop-shadow(0 80px 1px var(--light-grayish-blue));
+    }
+    main {
+        padding: 3rem 5rem;
+    }
+    h1 {
+        text-align: left;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
